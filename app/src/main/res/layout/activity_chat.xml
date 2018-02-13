@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/layoutMain"
+    tools:context="com.supergolf500.golfchat.Chat.ActivityChat">
+
+
+    <LinearLayout
+        android:id="@+id/layout_bar_buttom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewChat"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fadeScrollbars="true"
+            android:scrollbars="vertical"
+            app:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/item_chat_1" />
+
+        <LinearLayout
+            android:id="@+id/layoutInputMessage"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/buttom_bar_bg"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_height="40dp"
+                android:layout_width="40dp"
+                app:srcCompat="@drawable/icon_plus"
+                android:id="@+id/btnOption"
+                android:background="@drawable/send_button_bg"
+                android:scaleType="fitCenter"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="เขียนข้อความ..."
+                android:text=""
+                android:ems="10"
+                android:id="@+id/edtMessage"
+                android:layout_weight="1"
+                android:background="#00000000"
+                style="@style/EditTextTheme"
+                android:textSize="15dp"
+                android:imeOptions="actionSend"
+                android:layout_marginLeft="10dp"
+                android:padding="12dp" />
+
+            <ImageView
+                android:layout_height="40dp"
+                android:layout_width="40dp"
+                app:srcCompat="@drawable/microphone"
+                android:id="@+id/btnSend"
+                android:transitionName="transitionBtnSend"
+                android:scaleType="fitCenter"
+                android:padding="13dp"
+                android:background="@drawable/send_button_bg"
+                android:layout_marginRight="10dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:navigationIcon="?attr/homeAsUpIndicator">
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

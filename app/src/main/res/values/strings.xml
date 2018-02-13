@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GolfChat</string>
+    <string name="title_activity_chat">ActivityChat</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

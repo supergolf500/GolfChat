@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/L1"
+            android:layout_height="match_parent"
+            android:layout_width="fill_parent"
+            android:layout_alignParentTop="true" >
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/icon1"
+                android:layout_alignParentTop="true"
+                android:id="@+id/imgPhoto"
+                app:border_width="1dp"
+                app:border_color="@android:color/white"
+                android:layout_marginRight="5dp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutBody"
+            android:layout_height ="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/chat_bg1"
+            android:layout_below="@+id/L1"
+            android:layout_above="@+id/L2">
+
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/miniMap"
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                app:liteMode="true"
+                app:mapType="normal"
+                app:cameraZoom="15"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    app:srcCompat="@drawable/map_pin"
+                    android:id="@+id/imageView"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+                <TextView
+                    android:text="fdgfdsfsdffsdfsd fsfdfffsdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtMessage"
+                    android:padding="10dp"
+                    android:textSize="13dp"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/L2"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:padding="5dp">
+            <TextView
+                android:text="อ่านแล้ว"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtStatus"
+                android:textColor="@android:color/black"
+                android:textSize="9dp" />
+            <TextView
+                android:text="20:50 PM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTime"
+                android:textColor="@android:color/black"
+                android:textSize="9dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

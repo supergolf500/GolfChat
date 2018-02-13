@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:id="@+id/L2"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:padding="5dp">
+            <TextView
+                android:text="อ่านแล้ว"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtStatus"
+                android:textColor="@android:color/black"
+                android:textSize="9dp" />
+            <TextView
+                android:text="20:50 PM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTime"
+                android:textColor="@android:color/black"
+                android:textSize="9dp" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/layoutBody"
+            android:layout_height ="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/chat_bg2"
+            android:layout_above="@+id/L2">
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/miniMap"
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                app:liteMode="true"
+                app:mapType="normal"
+                app:cameraZoom="15"/>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <ImageView
+                    app:srcCompat="@drawable/map_pin"
+                    android:id="@+id/imageView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp" />
+
+
+                <TextView
+                    android:text="sfsdfsdfdsfdsfdsfsfdfdsfsdfffdsfdsfdsfdsfdsfdsfdsfsfsdfdfsd fsdfffsdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtMessage"
+
+                    android:padding="10dp"
+                    android:textSize="13dp"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+</LinearLayout>

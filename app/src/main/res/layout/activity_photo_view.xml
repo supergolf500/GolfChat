@@ -1,0 +1,65 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black">
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:background="#60000000"
+            android:gravity="center"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_current_matrix"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="#60000000"
+            android:gravity="center"
+            android:textColor="@android:color/white" />
+
+        <uk.co.senab.photoview.PhotoView
+            android:id="@+id/iv_photo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <!--<ProgressBar-->
+            <!--android:id="@+id/progressBar2"-->
+            <!--style="?android:attr/progressBarStyleHorizontal"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="top|center_horizontal"-->
+            <!--android:max="100"-->
+            <!--android:progress="1"-->
+            <!--android:minHeight="50dp"-->
+            <!--android:minWidth="200dp"-->
+             <!--/>-->
+
+
+        <com.daimajia.numberprogressbar.NumberProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="fill_parent"
+            android:layout_gravity="center|center_horizontal"
+            custom:progress_unreached_color="#CCCCCC"
+            custom:progress_reached_color="#3498DB"
+            custom:progress_unreached_bar_height="0.75dp"
+            custom:progress_reached_bar_height="1.5dp"
+            custom:progress_text_size="10sp"
+            custom:progress_text_color="#3498DB"
+            custom:progress_text_offset="1dp"
+            custom:progress_text_visibility="visible"
+            android:max="100"
+            android:progress="1"
+            android:layout_height="30dp"
+            android:padding="10dp" />
+
+
+    </FrameLayout>
+
+</merge>
